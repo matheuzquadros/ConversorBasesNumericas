@@ -48,7 +48,7 @@ app.controller('myConversorController', ['$scope', function ($scope) {
     return result;
   }
 
-  var Decimal = {
+  const Decimal = {
     toOctal(number) {
       var divisao = number / 8;
       var resto = (divisao - parseInt(divisao)) * 8;
@@ -99,7 +99,7 @@ app.controller('myConversorController', ['$scope', function ($scope) {
     }
   };
 
-  var Binary = {
+  const Binary = {
     toOctal(number) {
       let decimal = this.toDecimal(number);
       return Decimal.toOctal(decimal);
@@ -113,7 +113,7 @@ app.controller('myConversorController', ['$scope', function ($scope) {
     }
   };
 
-  var Hexadecimal = {
+  const Hexadecimal = {
     toDecimal(number) {
       return parseDecimal(number, 16);
     },
@@ -127,7 +127,7 @@ app.controller('myConversorController', ['$scope', function ($scope) {
     }
   };
 
-  var Octal = {
+  const Octal = {
     toDecimal(number) {
       return parseDecimal(number, 8);
     },
@@ -143,6 +143,10 @@ app.controller('myConversorController', ['$scope', function ($scope) {
 
   $scope.typeToConvert = Decimal;
   $scope.inputType = 10;
+
+  angular.element(document).ready(function () {
+        angular.element('.selectpicker').val(10);
+    });
 
   $scope.$watch('inputType', function (newValue, oldValue) {
     switch (newValue) {

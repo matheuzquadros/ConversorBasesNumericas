@@ -27,11 +27,12 @@
 }
 
 .wrapper span{
-    padding-top: 13px;
+    padding: 13px 10px 10px 10px;
     display: block;
     background-color: black;
     color: #7aff5b;
     min-height: 50px;
+    word-break: break-all;
 }
 
 body{
