@@ -1,10 +1,41 @@
 #input{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
+    margin-top: 20%;
 }
 
 .conversion{
     margin-top: 40px;
     text-align: center;
 }
+
+
+.wrapper{
+    padding: 5px;
+    margin: 20px;
+    background-color: #141418;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    color: white;
+    border-radius: 5px;
+}
+
+.wrapper strong{
+    display: inline;
+    font-family: DIN Pro,sans-serif;
+}
+
+.wrapper span{
+    padding-top: 13px;
+    display: block;
+    background-color: black;
+    color: #7aff5b;
+    min-height: 50px;
+}
+
+body{
+    font-family:Courier;
+ background-color: #1e1e22;
+}
+
