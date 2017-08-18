@@ -141,6 +141,7 @@ app.controller('myConversorController', ['$scope', function ($scope) {
     }
   };
 
+
   $scope.typeToConvert = Decimal;
   $scope.inputType = 10;
 
@@ -165,5 +166,25 @@ app.controller('myConversorController', ['$scope', function ($scope) {
     }
     console.log($scope.typeToConvert);
   });
+
+  $scope.teste = function(e){
+    if(e.keyCode === 8){
+      return;
+    }
+    var input = e.key;
+    if($scope.inputType == 10){
+      if(!isNumeric(input) || !Number.isSafeInteger(parseInt(input))){
+        e.preventDefault();
+      }
+    }else if($scope.inputType == 2){
+      if(input < 0 || input > 1){
+        e.preventDefault();
+      }
+    }else if($scope.inputType == 8){
+      if(input < 0 || input > 7){
+        e.preventDefault();
+      }
+    }
+  }
 
 }]);

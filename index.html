@@ -12,9 +12,13 @@
 
 <body ng-controller="myConversorController">
     <div class="row">
+        <h1>Conversor de Bases</h1>
+        
+    </div>
+    <div class="row">
         <div class="col-lg-6" id="input">
             <div class="input-group">
-                <input type="text" ng-model="input.value" class="form-control">
+                <input type="text" name="value" ng-model="input.value" class="form-control" ng-keydown="teste($event)">
                 <select class="selectpicker" ng-model="inputType">
                     <option value="10" selected="selected">Decimal</option>
                     <option value="2">Binário</option>
